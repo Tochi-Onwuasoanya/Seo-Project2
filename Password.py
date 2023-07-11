@@ -8,6 +8,7 @@ from rdoclient import RandomOrgClient
 # import used for validating URLs
 import validators
 
+
 # Ensures that the genrated password is valid
 def Valid_Password(password):
     # A password is valid if it contains at least one upper case letter,
@@ -128,7 +129,7 @@ def Quick_Create_Password():
 
     r = RandomOrgClient(API_KEY)
     # Using random.randint() to minimize the calls to the API
-    PASSWORD_LENGTH = random.randint(10,25)
+    PASSWORD_LENGTH = random.randint(10, 25)
 
     # Generates PASSWORD_LENGTH number of integers from 33 to 126
     random_ints = r.generate_integers(PASSWORD_LENGTH, 33, 126)
